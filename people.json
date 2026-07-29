@@ -1,0 +1,118 @@
+[
+  {
+    "category": "pi",
+    "name": "Name",
+    "role": "Principal Investigator",
+    "image": "",
+    "bio": "lorem",
+    "work":"",
+    "linkedin": "https://linkedin.com/in/sarahjenkins"
+  },
+  {
+    "category": "phd",
+    "name": "Rishabh Tripathi",
+    "role": "Ph.D. Scholar (3rd Year)",
+    "image": "",
+    "bio": "Will update soon",
+    "work":"",
+    "linkedin": ""
+  },
+  {
+    "category": "phd",
+    "name": "Shreya Chandrakant Thakre",
+    "role": "Ph.D. Scholar (2nd Year)",
+    "image": "images/Shreya_profile.jpeg",
+    "bio": "Geoscientist with an MSc in Applied Geology from IIEST Shibpur. Worked in computational mineral physics and mineral anisotropy. Currently exploring the geophysics of the Indian crust using seismic ambient noise and InSAR.",
+    "work":"I'm working on seismic ambient noise analysis to understand the geodynamic evolution of the Satpura Gondwana Basin and CITZ (Central Indian Tectonic Zone). I also have experience working with InSAR (Interferometric Synthetic Aperture Radar) and induced seismicity.",
+    "linkedin": ""
+  },
+  {
+    "category": "bsms",
+    "name": "A Santosh Kumar",
+    "role": "BS-MS Thesis Student",
+    "image": "",
+    "bio": "lorem",
+    "work":"",
+    "linkedin": "https://linkedin.com/in/davidkim"
+  },
+  {
+    "category": "bsms",
+    "name": "Manaal Rafeeque",
+    "role": "BS-MS Thesis Student",
+    "image": "images/manaal.png",
+    "bio": "Will update soon",
+    "work":"",
+    "linkedin": "https://linkedin.com/in/chloebennett"
+  },
+  {
+    "category": "bsms",
+    "name": "Manjul Meena",
+    "role": "BS-MS Thesis Student",
+    "image": "",
+    "bio": "will update soon",
+    "work":"",
+    "linkedin": ""
+  },
+  {
+    "category": "bsms",
+    "name": "Riya Bhardwaj",
+    "role": "BS-MS Thesis Student",
+    "image": "images/riya.webp",
+    "bio": "Will update soon",
+    "work":"",
+    "linkedin": "https://linkedin.com/in/sofiachen"
+  },
+  {
+    "category": "alumni",
+    "name": "Subhkaran Mahla",
+    "role": "JRF",
+    "image": "images/Subhkaran Mahla.jpeg",
+    "bio": "Former Junior Research Fellow at IISER Bhopal, conducted research in Environmental Seismology and Hydrometeorology ",
+    "work": "Research work in Environmental Seismology and Hydrometeorology, with experience in seismic, geospatial, and environmental data analysis and processing using GIS and Python.",
+    "linkedin": "https://scholar.google.com/citations?user=FAgjoQkAAAAJ&hl=en&authuser=1"
+  },
+  {
+    "category": "alumni",
+    "name": "",
+    "role": "phd",
+    "image": "",
+    "bio": "",
+    "work":"",
+    "linkedin": "https://linkedin.com/in/noahmiller"
+  },
+  {
+    "category": "alumni",
+    "name": "",
+    "role": "phd",
+    "image": "",
+    "bio": "",
+    "work":"",
+    "linkedin": "https://linkedin.com/in/noahmiller"
+  },
+  {
+    "category": "alumni",
+    "name": "",
+    "role": "bsms",
+    "image": "",
+    "bio": "",
+    "work":"",
+    "linkedin": "https://linkedin.com/in/noahmiller"
+  },
+  {
+    "category": "intern",
+    "name": "",
+    "role": "Summer Intern",
+    "image": "",
+    "bio": "",
+    "work":"",
+    "linkedin": "https://linkedin.com/in/noahmiller"
+  },
+  {
+    "category": "intern",
+    "name": "",
+    "role": "Research Intern",
+    "image": "",
+    "bio": "",
+    "linkedin": ""
+  }
+]

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEO-SEIS Lab  | Seismology & Earth Structure Group</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="seismo-app">
+
+    <!-- Navigation Header -->
+
+    <header class="navbar">
+      <div class="nav-brand" data-page="home">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h4l3-9 4 18 3-9h6" />
+          </svg>
+        </div>
+        <div>
+          <h1>GEO-SEIS LAB</h1>
+          <p>Seismology & Earth Structure Group</p>
+        </div>
+      </div>
+
+      <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation">☰</button>
+
+      <nav class="nav-menu" id="nav-menu">
+        <button class="nav-item active" data-page="home">HOME</button>
+        <button class="nav-item" data-page="about">ABOUT US</button>
+        <button class="nav-item" data-page="research">RESEARCH</button>
+        <button class="nav-item" data-page="people">PEOPLE</button>
+        <button class="nav-item" data-page="publications">PUBLICATIONS AND PAPERS</button>
+        <button class="nav-item" data-page="teaching">COURSE-WORK</button>
+        <button class="nav-item" data-page="news">NEWS AND ALERTS</button>
+      </nav>
+    </header>
+
+    <!-- Main Dynamic Content Container -->
+
+    <main class="main-content">
+      <!-- 1. HOME PAGE -->
+      
+
+      <section id="page-home" class="page-wrapper fade-in active">
+        <div class="hero">
+          <!-- <div class="hero-badge">A dynamic observational research group</div> -->
+          <div class="typing-container">
+            <h1 class="typing-heading">Welcome to GEO-SEIS Lab</h1>
+          </div>
+          <p>
+            We integrate dense array observations, wavefield modeling, and machine learning 
+            to understand fault rupture dynamics and deep Earth structure.
+          </p>
+        </div>
+
+        
+
+        <div class="section-grid">
+          <div class="card">
+            <h3>Real-time Monitoring</h3>
+            <p>Operating a network of 45 broadband seismic stations deployed across active tectonic zones.</p>
+          </div>
+          <div class="card">
+            <h3>High-Performance Computing</h3>
+            <p>Full 3D wave-equation simulation capabilities using GPU-accelerated spectral element methods.</p> 
+          </div>
+          <div class="card">
+            <h3>Field Expeditions</h3>
+            <p>Rapid deployment capabilities for post-earthquake aftershock sequences and ambient noise imaging.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--  ABOUT US PAGE -->
+
+      <section id="page-about" class="page-wrapper fade-in">
+        <h2 class="typing-heading" >About us</h2>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quam, amet necessitatibus sapiente laboriosam corporis voluptate dolor molestiae et ut quas fugiat dolorem inventore, vero placeat natus magnam deserunt eum.
+        </p>
+        <div class="content-box">
+          <h3>Our Mission</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque velit debitis amet repudiandae perferendis. Perferendis tenetur asperiores magnam sint quasi a dolorum deserunt dignissimos! Ipsum aspernatur quo non rerum earum.
+          </p>
+        </div>
+        <div class="stats-row">
+          <div class="stat-item"><strong>...</strong> Papers Published</div>
+          <div class="stat-item"><strong>...</strong> Active Stations</div>
+          <div class="stat-item"><strong>...</strong> Field Campaigns</div>
+        </div>
+      </section>
+
+      <!-- RESEARCH PAGE -->
+
+      <section id="page-research" class="page-wrapper fade-in">
+        <h2 class="typing-heading">Our Research</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Ambient Noise Tomography</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima excepturi hic blanditiis sunt molestiae odio voluptatem maiores quidem unde repudiandae, vel est perferendis ipsam quis rerum esse qui suscipit repellendus!</p>
+          </div>
+          <div class="card">
+            <h3>Induced Seismicity</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sapiente suscipit quam non natus, doloremque molestiae minima eius nihil odio iusto dolore officia, cupiditate mollitia ea ipsa, reiciendis ut possimus.</p>
+          </div>
+          <div class="card">
+            <h3>Full Waveform Inversion (FWI)</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit pariatur delectus molestiae doloremque veniam iusto id dolor earum, assumenda quaerat ullam corrupti, ea corporis! Quibusdam vitae necessitatibus illum dolorum laborum.</p>
+          </div>
+          <div class="card">
+            <h3>Deep Earth Structure</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, voluptate optio debitis velit beatae laborum quos aperiam quisquam fugiat fugit voluptates, non quod inventore maiores repudiandae quibusdam? Soluta, sit vero.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PEOPLE PAGE -->
+
+      <section id="page-people" class="page-wrapper fade-in">
+        <!-- PI Section (Featured Hero Grid) -->
+        <h2 class="section-title">Principal Investigator</h2>
+        <div id="pi-container" class="grid-pi"></div>
+
+        <!-- PhD Section (2-Column Grid) -->
+        <h2 class="section-title">Ph.D. Scholars</h2>
+        <div id="phd-container" class="grid-phd"></div>
+
+        <!-- BS-MS Section -->
+        <h2 class="section-title">BS-MS Students</h2>
+        <div id="bsms-container" class="grid-sub"></div>
+
+        <!-- Alumni Section with Sub-divisions -->
+        <h2 class="section-title">Alumni</h2>
+        
+        <h3 class="section-title" style="font-size: 1.2rem; border: none; margin-top: 15px;">Junior Research Fellows (JRF)</h3>
+        <div id="alumni-jrf-container" class="grid-phd"></div>
+
+        <h3 class="section-title" style="font-size: 1.2rem; border: none; margin-top: 15px;">Ph.D. Alumni</h3>
+        <div id="alumni-phd-container" class="grid-phd"></div>
+
+        <h3 class="section-title" style="font-size: 1.2rem; border: none; margin-top: 15px;">BS-MS Alumni</h3>
+        <div id="alumni-bsms-container" class="grid-phd"></div>
+
+        <!-- Interns Section -->
+        <h2 class="section-title">Interns</h2>
+        <div id="intern-container" class="grid-sub"></div>
+      </section>
+
+      <!--  PUBLICATIONS PAGE -->
+
+      <section id="page-publications" class="publications-section page-wrapper fade-in">
+
+        <!-- Journal Articles Section -->
+        <h2 class="section-title">Journal Articles</h2>
+        <div id="journal-container" class="grid-publications"></div>
+
+        <!-- Conference Papers Section -->
+        <h2 class="section-title">Conference Proceedings</h2>
+        <div id="conference-container" class="grid-publications"></div>
+      </section>
+
+      <!-- courses -->
+
+      <section id="page-teaching" class="teachings-section page-wrapper fade-in">
+        <!-- Odd Semester Courses Section -->
+        <h2 class="section-title">Odd Semester Courses</h2>
+        <div id="odd-container" class="grid-odd"></div>
+
+        <!-- Even Semester Courses Section -->
+        <h2 class="section-title">Even Semester Courses</h2>
+        <div id="even-container" class="grid-even"></div>
+      </section>
+      
+    
+      <!--  NEWS PAGE -->
+
+      <section id="page-news" class="news-section page-wrapper fade-in">
+        
+        <!-- News Section -->
+        <h2 class="section-title">Latest News</h2>
+        <div id="news-container" class="grid-news"></div>
+
+        <!-- Alerts Section -->
+        <h2 class="section-title">Alerts</h2>
+        <div id="alert-container" class="grid-alerts"></div>
+      </section>
+
+
+
+    </main>
+
+    <!-- Footer -->
+     
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>GEO-SEIS Group</h3>
+          <p>Department of Earth & Environmental sciences</p>
+          <p>Indian Institute of science education and research</p>
+        </div>
+        <div>
+          <h4>Address</h4>
+          <p>Lab No. 210 
+             Second floor
+             AB-4
+             IISER Bhopal
+             Bhopal
+          </p>
+          <p>Pin - 462066</p>
+        </div>
+        <div>
+          <h4>Emergency Contact</h4>
+          <p>Lab phone number: +91 755 269 1477 </p>
+          <p>email: aktiwari@iiserb.ac.in </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> GEO-SEIS Lab. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

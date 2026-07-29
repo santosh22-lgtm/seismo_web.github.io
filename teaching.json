@@ -1,0 +1,28 @@
+[
+  {
+    "code": "EES 301",
+    "title": "Introduction to Seismology",
+    "semester": "Odd Semester (Fall)",
+    "semesterType": "odd",
+    "year": "2024, 2025, 2026",
+    "topics": [
+      "Fundamental principles of elastic wave propagation",
+      "Seismometry, instrument response, and modern digital networks",
+      "Kinematic and dynamic earthquake source mechanisms",
+      "Introduction to travel-time analysis and global Earth structure"
+    ]
+  },
+  {
+    "code": "EES 402",
+    "title": "Advanced Geophysics",
+    "semester": "Even Semester (Spring)",
+    "semesterType": "even",
+    "year": "2025, 2026",
+    "topics": [
+      "Linear and nonlinear inverse theory in geophysics",
+      "Surface wave dispersion and ambient noise tomography",
+      "Full waveform inversion (FWI) principles",
+      "High-performance numerical modeling of seismic wavefields"
+    ]
+  }
+]
