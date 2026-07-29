@@ -4,9 +4,9 @@
     "name": "Name",
     "role": "Principal Investigator",
     "image": "",
-    "bio": "lorem",
+    "bio": "will update soon",
     "work":"",
-    "linkedin": "https://linkedin.com/in/sarahjenkins"
+    "linkedin": ""
   },
   {
     "category": "phd",
@@ -31,9 +31,9 @@
     "name": "A Santosh Kumar",
     "role": "BS-MS Thesis Student",
     "image": "",
-    "bio": "lorem",
+    "bio": "will update soon",
     "work":"",
-    "linkedin": "https://linkedin.com/in/davidkim"
+    "linkedin": ""
   },
   {
     "category": "bsms",
@@ -42,7 +42,7 @@
     "image": "images/manaal.png",
     "bio": "Will update soon",
     "work":"",
-    "linkedin": "https://linkedin.com/in/chloebennett"
+    "linkedin": ""
   },
   {
     "category": "bsms",
@@ -73,46 +73,29 @@
   },
   {
     "category": "alumni",
-    "name": "",
-    "role": "phd",
+    "name": "will update soon",
+    "role": "Ph.D.",
     "image": "",
-    "bio": "",
+    "bio": "will update soon",
     "work":"",
-    "linkedin": "https://linkedin.com/in/noahmiller"
-  },
-  {
-    "category": "alumni",
-    "name": "",
-    "role": "phd",
-    "image": "",
-    "bio": "",
-    "work":"",
-    "linkedin": "https://linkedin.com/in/noahmiller"
-  },
-  {
-    "category": "alumni",
-    "name": "",
-    "role": "bsms",
-    "image": "",
-    "bio": "",
-    "work":"",
-    "linkedin": "https://linkedin.com/in/noahmiller"
-  },
-  {
-    "category": "intern",
-    "name": "",
-    "role": "Summer Intern",
-    "image": "",
-    "bio": "",
-    "work":"",
-    "linkedin": "https://linkedin.com/in/noahmiller"
-  },
-  {
-    "category": "intern",
-    "name": "",
-    "role": "Research Intern",
-    "image": "",
-    "bio": "",
     "linkedin": ""
+  },
+  {
+    "category": "alumni",
+    "name": "will update soon",
+    "role": "Ph.D.",
+    "image": "",
+    "bio": "will update soon",
+    "work":"",
+    "linkedin": ""
+  },
+  {
+    "category": "alumni",
+    "name": "Mitali Thakur ",
+    "role": "BS-MS",
+    "image": "images/mitalli.jpg",
+    "bio": "I am Mitali Thakur, a BS-MS graduate in Earth and Environmental Sciences from IISER Bhopal. My research interests center on environmental seismology, ambient noise interferometry, and hydrological monitoring. I enjoy learning new analytical techniques to explore subsurface processes, and outside the lab, I spend my free time crocheting and cooking.",
+    "work":"My research interests focus on investigating subsurface hydrological processes through ambient seismic noise interferometry and seismic velocity monitoring. My work involves the analysis of continuous seismic records, signal processing techniques, and the integration of hydrological observations to understand temporal variations in subsurface properties.",
+    "linkedin": "www.linkedin.com/in/mitali-thakur-a02300277"
   }
 ]
