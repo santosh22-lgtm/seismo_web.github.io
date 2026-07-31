@@ -12,18 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to navigate between pages
   function navigateTo(targetPageId) {
-    // Hide all pages
     pageSections.forEach(section => {
       section.classList.remove('active');
     });
 
-    // Show target page
     const targetSection = document.getElementById(`page-${targetPageId}`);
     if (targetSection) {
       targetSection.classList.add('active');
     }
 
-    // Update active state in nav bar
     navItems.forEach(item => {
       if (item.getAttribute('data-page') === targetPageId) {
         item.classList.add('active');
@@ -32,12 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close mobile menu if open
     if (navMenu) {
       navMenu.classList.remove('open');
     }
 
-    // Smooth scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -56,36 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('open');
     });
   }
-
-  // Handle Contact Form Submission
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you for reaching out to GEO-SEIS Lab! We will respond shortly.');
-      contactForm.reset();
-    });
-  }
 });
 
-// =================================== for the people tab updates ============================================
-
+// ====================== PEOPLE TAB =========================
 document.addEventListener("DOMContentLoaded", () => {
   fetch("people.json")
     .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       return response.json();
     })
-    .then((data) => {
-      renderPeople(data);
-    })
+    .then((data) => renderPeople(data))
     .catch((error) => console.error("Error loading people data:", error));
 });
 
 function renderPeople(people) {
-  // Clear all containers prior to population, including specific alumni sub-categories
   const containers = {
     pi: document.getElementById("pi-container"),
     phd: document.getElementById("phd-container"),
@@ -104,7 +83,6 @@ function renderPeople(people) {
     let targetContainer = null;
 
     if (person.category === "alumni") {
-      // Sub-divide alumni by their role (JRF, PhD, BSMS)
       const roleLower = person.role.toLowerCase();
       if (roleLower.includes("jrf") || roleLower.includes("junior research fellow")) {
         targetContainer = containers["alumni-jrf"];
@@ -126,7 +104,6 @@ function renderPeople(people) {
 function createCard(person) {
   const card = document.createElement("div");
 
-  // Principal Investigator card layout
   if (person.category === "pi") {
     card.className = `pi-card`;
     const nameHTML = person.linkedin
@@ -144,7 +121,6 @@ function createCard(person) {
     return card;
   }
 
-  // PhDs, BS-MS, Interns, and Alumni layout (Thumbnail + Details)
   card.className = person.category === "alumni" ? "person-card alumni-card" : `person-card ${person.category}-card`;
 
   const nameHTML = person.linkedin
@@ -160,7 +136,6 @@ function createCard(person) {
           <span class="person-role">${person.role}</span>
         </div>
       </div>
-      
       <div class="person-sub-item">
         <h4>${person.bio || ""}</h4>
       </div>
@@ -171,19 +146,14 @@ function createCard(person) {
   return card;
 }
 
-// ====================== for rendering teaching tabs =========================
-
+// ====================== TEACHING TAB =========================
 document.addEventListener("DOMContentLoaded", () => {
   fetch("teaching.json")
     .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       return response.json();
     })
-    .then((data) => {
-      renderCourses(data);
-    })
+    .then((data) => renderCourses(data))
     .catch((error) => console.error("Error loading teaching data:", error));
 });
 
@@ -198,7 +168,7 @@ function renderCourses(courses) {
   });
 
   courses.forEach((course) => {
-    const targetContainer = containers[course.semesterType]; // expected: 'odd' or 'even'
+    const targetContainer = containers[course.semesterType];
     if (targetContainer) {
       targetContainer.appendChild(createCourseCard(course));
     }
@@ -209,12 +179,10 @@ function createCourseCard(course) {
   const card = document.createElement("div");
   card.className = `course-card ${course.semesterType}-card`;
 
-  // Map each topic into a sub-bullet list item
   const subTopicsHTML = course.topics && Array.isArray(course.topics)
     ? course.topics.map(topic => `<li class="course-sub-item">${topic}</li>`).join('')
     : `<li class="course-sub-item">${course.description || ''}</li>`;
 
-  // Conditionally render year if available
   const yearHTML = course.year ? `<span class="course-year">${course.year}</span>` : '';
 
   card.innerHTML = `
@@ -228,7 +196,6 @@ function createCourseCard(course) {
           <span class="course-semester">${course.semester}</span>
           ${yearHTML}
         </div>
-        
         <ul class="course-sub-list">
           ${subTopicsHTML}
         </ul>
@@ -239,19 +206,14 @@ function createCourseCard(course) {
   return card;
 }
 
-// ====================== for rendering news and alerts =========================
-
+// ====================== NEWS AND ALERTS =========================
 document.addEventListener("DOMContentLoaded", () => {
   fetch("news.json")
     .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       return response.json();
     })
-    .then((data) => {
-      renderNewsAndAlerts(data);
-    })
+    .then((data) => renderNewsAndAlerts(data))
     .catch((error) => console.error("Error loading news data:", error));
 });
 
@@ -266,7 +228,7 @@ function renderNewsAndAlerts(items) {
   });
 
   items.forEach((item) => {
-    const targetContainer = containers[item.type]; // expected: 'news' or 'alert'
+    const targetContainer = containers[item.type];
     if (targetContainer) {
       targetContainer.appendChild(createNewsCard(item));
     }
@@ -289,20 +251,14 @@ function createNewsCard(item) {
   return card;
 }
 
-
-// ====================== for rendering publications =========================
-
+// ====================== PUBLICATIONS =========================
 document.addEventListener("DOMContentLoaded", () => {
   fetch("publications.json")
     .then((response) => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
       return response.json();
     })
-    .then((data) => {
-      renderPublications(data);
-    })
+    .then((data) => renderPublications(data))
     .catch((error) => console.error("Error loading publications data:", error));
 });
 
@@ -317,7 +273,7 @@ function renderPublications(pubs) {
   });
 
   pubs.forEach((pub) => {
-    const targetContainer = containers[pub.type]; // expected: 'journal' or 'conference'
+    const targetContainer = containers[pub.type];
     if (targetContainer) {
       targetContainer.appendChild(createPubCard(pub));
     }
@@ -328,7 +284,6 @@ function createPubCard(pub) {
   const card = document.createElement("div");
   card.className = `pub-card ${pub.type}-item-card`;
 
-  // Conditionally render links if provided
   let linksHTML = "";
   if (pub.doi) {
     linksHTML += `<a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener noreferrer" class="pub-link">DOI &rarr;</a>`;
